@@ -1,5 +1,3 @@
-apply(from = "$rootDir/gradle/dependencies.gradle")
-
 plugins {
     java
 }
@@ -17,7 +15,7 @@ dependencies {
     testRuntime(library("junitJupiterEngine"))
 }
 
-tasks.named<Test>("test") {
+tasks.test {
     useJUnitPlatform()
 }
 
